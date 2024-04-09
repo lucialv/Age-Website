@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Event from "../components/Event.jsx";
+import AgeCounter from "../components/Age.jsx";
+---
+
+<Layout title="Lucía's Age" description="Web for view current age of Lucía">
+  <main>
+    <section class="mt-20">
+      <div class="leading-[50px] justify-center flex text-3xl font-bold bg-clip-text text-transparent via-pink-500 from-fuchsia-700 to-indigo-800 bg-gradient-to-r">
+        <div class="text-center">
+          <div class="flex items-center justify-center">
+            <h1 class="text-4xl" 
+            >
+              Lucía's Age 
+            </h1>
+            <img src="/kitty.png" alt="kitty" class="ml-4 h-16">
+          </div>
+          <div class="mt-8 bg-clip-text text-transparent via-pink-500 from-fuchsia-700 to-indigo-800 bg-gradient-to-r">
+            <AgeCounter client:only="react"/>
+          </div>
+        </div>
+      </div>
+      <Event titulo={"18 years"} fecha={"2025-11-13"} client:only="react" />
+      <Event titulo={"17 years"} fecha={"2024-11-13"} client:only="react" />
+    </section>
+  </main>
+</Layout>
